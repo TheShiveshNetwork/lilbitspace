@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,4 +15,10 @@
 body {
   color: var(--foreground);
   background: var(--background);
+}
+
+@layer utilities {
+  .green-radial-gradient {
+    @apply bg-gradient-to-tr from-[#43e97b] to-[#38f9d7]
+  }
 }

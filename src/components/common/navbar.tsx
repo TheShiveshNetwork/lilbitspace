@@ -1,12 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
+import LOGO from "/public/logo.png";
 
 export function Navbar() {
     return (
-        <nav className="bg-gray-800 p-4">
-            <div className="container mx-auto flex justify-between items-center">
-                <Link href={"/"} className="text-white font-bold">Lilbitspace</Link>
+        <nav className="transparent absolute w-full px-4 py-4 md:px-8 lg:px-16 xl:px-24">
+            <div className="flex justify-between items-center">
+                <Link href={"/"} className="text-lg font-bold flex gap-2 items-center">
+                    <Image src={LOGO} alt="lilbitspace" height={30} width={30} />
+                    Lilbitspace
+                </Link>
                 <div>
-                    <Link href="/create" className="text-white mx-2">Create</Link>
+                    <Link href="/create" className="">Create</Link>
                 </div>
             </div>
         </nav>
